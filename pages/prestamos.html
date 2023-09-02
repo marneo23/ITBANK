@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamos - RAWRBank</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/logo.png">
+</head>
+
+<body class="prestamosBody">
+    <div class="bodyWrapper">
+
+        <section class="sidebar sidebarPrestamos">
+            <div class="wrapper">
+
+                <header>
+                    <h2>RAWR</h2>
+                    <img src="../assets/icons/logo.png" alt="Logo">
+                    <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+                </header>
+
+                <nav class="navigationMenu">
+                    <ul>
+                        <li><a href="cuentas.html">Cuentas</a></li>
+                        <li><a href="transferencia.html">Transferencias</a></li>
+                        <li><a href="pagos.html">Pagos</a></li>
+                        <li class="currentPage"><a href="prestamos.html">Prestamos</a></li>
+                        <li><a href="convertidor.html">Convertidor de moneda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <main class="prestamosMain">
+            <h1>Prestamos</h1>
+
+            <h3>Podés pedir hasta $1.000.000</h3>
+
+            <section>
+                <div class="nuevoPrestamo">
+                    <h3>Solicitar nuevo préstamo</h3>
+                    <form id="prestamosForm" class="prestamosForm" method="GET" action="your_processing_script_here">
+
+                        <label for="cuentaSelect">Cuenta que recibirá el prestamo:</label>
+                        <select title="selectCuenta" name="cuentaSelect" id="cuentaSelectPagos">
+                            <option value="cuenta1">Caja de ahorro N°123</option>
+                        </select>
+                        <label for="importe">Importe:</label>
+                        <input type="number" required max=1000000 name="importe" id="importe">
+
+                        <label for="motivo">Motivo:</label>
+                        <input type="text" required name="motivo" id="motivo">
+
+                        <label for="cuotas">Cantidad de cuotas: (máx. 24)</label>
+                        <input type="number" min="1" max="24" placeholder="1" name="cuotas" id="cuotas">
+
+                    </form>
+                </div>
+
+                <div class="prestamoDetails">
+                    <h4>Vas a pagar:</h4>
+                    <span class="previewPrestamo">Complete los campos para simular su préstamo</span>
+                    <form action="" name="terminosYCondiciones" method="post">
+                        <label><input type="checkbox" name="terminosYCondiciones" required id="">Acepto los términos y
+                            condiciones</label>
+                        <button type="submit">Pagar</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <a href="contacto.html">Contacto</a>
+        <div class="redesSociales">
+            <a href=""> <img src="../assets/icons/instagram.png" alt="Nuestro Instagram"> </a>
+            <a href=""> <img src="../assets/icons/twitter.png" alt="Nuestro Twitter"> </a>
+            <a href=""> <img src="../assets/icons/facebook.png" alt="Nuestro Facebook"> </a> 
+           </div>
+        <a href="index.html">Cerrar sesión</a>
+    </footer>
+</body>
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/prestamos.js"></script>
+
+</html>

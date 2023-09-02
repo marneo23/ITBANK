@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - RAWRBank</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/logo.png">
+</head>
+
+<body>
+    <div class="bodyWrapper">
+        <section class="sidebar">
+            <div class="wrapper">
+
+                <header>
+                    <h2>RAWR</h2>
+                    <img src="../assets/icons/logo.png" alt="Logo">
+                    <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+                </header>
+
+                <nav class="navigationMenu">
+                    <ul>
+                        <li><a href="cuentas.html">Cuentas</a></li>
+                        <li><a href="transferencia.html">Transferencias</a></li>
+                        <li class="currentPage"><a href="pagos.html">Pagos</a></li>
+                        <li><a href="prestamos.html">Prestamos</a></li>
+                        <li><a href="convertidor.html">Convertidor de moneda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <main class="pagosMain">
+            <h1>Pagos</h1>
+
+            <div class="cuentaSelect">
+                <h3>Cuenta origen:</h3>
+                <select name="Cuentas" id="selectCuentas">
+                    <option value="caja1">Caja de ahorro N°123</option>
+                    <option value="caja2">Cuenta Corriente N°321</option>
+                </select>
+            </div>
+
+            <section>
+                <h3>Facturas a pagar:</h3>
+                <div class="facturasWrapper">
+
+                    <form class="facturasResume" name="facturasForm" action="GET">
+
+                        <div class="facturaOption">
+                            <label>
+                                <input type="checkbox" name="facturasForm" value="1"> Edesur <span>$10</span></label>
+                            <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+                        </div>
+
+                        <div class="facturaOption"><label>
+                                <input type="checkbox" name="facturasForm" value="2"> AYSA <span>$15</span> </label>
+                            <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+                        </div>
+
+                        <div class="facturaOption">
+                            <label><input type="checkbox" name="facturasForm" value="3"> Metrogas <span>$5</span>
+                            </label>
+                            <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+                        </div>
+
+                        <div class="facturaOption">
+                            <label><input type="checkbox" name="facturasForm" value="4"> Speedy <span>$7</span> </label>
+                            <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+                        </div>
+
+                    </form>
+
+                    <section class="facturasDetails hidden">
+
+                    </section>
+            </section>
+
+            </section>
+
+
+            <section class="checkout">
+                <div class="totalSuma">
+                    <h3>Total:</h3><span class="total">$0</span>
+                </div>
+                <div class="cuentaDetail">
+                    <h3>Pagará desde:</h3><span class="cuentaSeleccionada">Caja de ahorro N°123</span>
+                </div>
+
+                <div class="pagarButton">
+                    <button type="submit">Pagar</button>
+                </div>
+                <span>Recuerde que la adhesión y eleminación de facturas debe efectuarse por <a href="contacto.html">vía telefónica.</a></span>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <a href="contacto.html">Contacto</a>
+        <div class="redesSociales">
+            <a href=""> <img src="../assets/icons/instagram.png" alt="Nuestro Instagram"> </a>
+            <a href=""> <img src="../assets/icons/twitter.png" alt="Nuestro Twitter"> </a>
+            <a href=""> <img src="../assets/icons/facebook.png" alt="Nuestro Facebook"> </a> 
+           </div>
+      <a href="index.html">Cerrar sesión</a>
+    </footer>
+</body>
+
+<script src="../scripts/pagos.js"></script>
+
+</html>

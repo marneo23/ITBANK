@@ -1,0 +1,595 @@
+:root {
+  --main-background-color: #2a3240;
+  --main-white: #f6f6f6;
+  --main-lightblue: #00a6ab;
+
+  --menu-lightgray: #ededed;
+  --footer-gray: #dbdbdb;
+}
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+.bodyWrapper {
+  display: flex;
+  min-height: 95vh;
+}
+//all main sections
+main {
+  position: relative;
+  margin: auto auto;
+  background-color: var(--main-white);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 4px solid var(--footer-gray);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #00a6ab;
+  align-self: center;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #00a6ab;
+  align-self: center;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+input[type="number"],
+input[type="text"] {
+  width: -webkit-fill-available;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  margin: 1rem;
+
+  height: 2rem;
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+
+  &:hover {
+    background-color: var(--footer-gray);
+    font-weight: 600;
+  }
+
+  &:active {
+    font-weight: 100;
+    background-color: var(--menu-lightgray);
+  }
+}
+
+select {
+  width: -webkit-fill-available;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sidebar */
+
+.sidebar {
+  height: inherit;
+  margin-top: 2.5vh;
+  width: 16rem;
+  border-radius: 0px 40px 0px 0px;
+  background-color: var(--main-white);
+  border: 3px solid var(--footer-gray);
+
+  img {
+    width: 5rem;
+    background-color: gray;
+    border-radius: 50%;
+  }
+
+  .dropDownMenu {
+    background-color: var(--main-white);
+    width: 2rem;
+    margin-left: 2rem;
+    border-radius: 0;
+    display: none;
+  }
+
+  .currentPage {
+    padding: 10px;
+    background-color: var(--footer-gray);
+    pointer-events: none;
+  }
+
+  /* wrapper para ubicar mejor el contenido dentro del sidebar */
+  .wrapper {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header {
+      display: flex;
+      margin: 1.5rem 0 1.5rem;
+      justify-content: center;
+      h1 {
+        color: #00a6ab;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+
+    nav {
+      position: relative;
+      top: -3rem;
+
+      ul li {
+        list-style: none;
+        margin: 2rem 0 2rem 0;
+        text-align: center;
+        transition: 500ms;
+
+        a {
+          display: block;
+        }
+        &:hover {
+          transition: 500ms;
+          transform: translateY(-0px);
+          padding: 10px;
+
+          background-color: var(--menu-lightgray);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  height: 3.5rem;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0 1.5rem 0;
+  background-color: var(--footer-gray);
+  .redesSociales{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 2rem;
+    width: 15rem;
+    justify-content: space-between;
+  
+    
+  img{
+    width: 2rem;
+    transition: 500ms;
+    transform: translateY(-0px);
+    cursor: pointer;
+    }
+  }
+}
+
+/* Cuentas */
+.cuentasMain {
+  position: relative;
+  margin: auto auto;
+  background-color: var(--main-background-color);
+  border: none;
+
+  .caja-ahorro {
+    background-color: var(--main-white);
+    border-radius: 20px;
+    border: 3px solid var(--footer-gray);
+
+    margin: 2rem 0 2rem;
+    padding: 3rem;
+
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+    .movimientosLink{
+      border: 2px solid var(--main-lightblue);
+      border-radius: 15px;
+      width: 415px;
+      margin: 0 16px 16px 16px;
+      text-align: center;
+      height: 1.7rem;
+      &:hover {
+        background-color: var(--footer-gray);
+        font-weight: 600;
+      }
+    }
+
+    .saldoWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      img {
+        width: 1.6rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+      }
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+
+    #transferir {
+      margin-top: 2rem;
+    }
+  }
+}
+
+/* Ultimos Movimientos */
+.ultimosMovimientosBody{
+  display: flex;
+  flex-direction: column;
+  ul{
+    list-style-type: none;
+    text-align: center;
+    li{
+      margin: 1rem 0 1rem
+    }
+    span{
+      font-weight: bold;
+    }
+    .ingreso{
+      color: green;
+    }
+    .egreso{
+      color: red;
+    }
+  }
+}
+
+/* Transferencias */
+.transferenciasMain {
+  background-color: var(--main-white);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  border-radius: 15px;
+
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+
+    label {
+      margin: 2rem 0 0.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    button {
+      margin: 2rem auto -0.5rem;
+      height: 2rem;
+      width: 8rem;
+    }
+  }
+}
+
+/* Pagos */
+.pagosMain {
+  margin: 1rem auto 1rem;
+
+  .cuentaSelect {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 1rem;
+    cursor: pointer;
+  }
+
+  .facturasWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .facturasResume,
+    .facturasDetails {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      padding: 2rem;
+      margin: 1rem;
+    }
+
+    .facturasDetails {
+      align-items: center;
+      text-align: center;
+      background-color: var(--footer-gray);
+      border-radius: 20px;
+      &.hidden {
+        display: none;
+      }
+
+      span {
+        color: red;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    .facturasPrice {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0 1rem;
+      dd {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .totalSuma,
+  .cuentaDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .pagarButton {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem;
+    text-align: center;
+
+    button {
+      height: 2rem;
+      border-radius: 10px;
+      border: 2px solid var(--main-lightblue);
+      cursor: pointer;
+      &:active {
+        background-color: var(--footer-gray);
+        font-size: 80%;
+      }
+    }
+  }
+
+  .checkout a{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+/* Prestamos */
+
+.sidebar.sidebarPrestamos {
+  height: inherit;
+}
+.prestamosBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.prestamosMain {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3.5rem;
+  margin: 1rem auto 1rem;
+
+  .nuevoPrestamo {
+    margin-top: 1.5rem;
+    .prestamosForm {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+      label {
+        margin-top: 1rem;
+      }
+      button {
+        margin-top: 2rem;
+        width: 10rem;
+      }
+    }
+  }
+  .prestamoDetails {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+/* login screen */
+
+/* Media Queries */
+@media (max-width: 840px) {
+  * {
+    flex-flow: column wrap;
+  }
+
+  body {
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+  }
+
+  div {
+    border-radius: 0;
+  }
+
+  .sidebar {
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+
+    header {
+      margin: 0;
+      flex-direction: row;
+      align-items: center;
+      .dropDownMenu {
+        display: block;
+      }
+    }
+
+    nav {
+      margin-top: 2rem;
+    }
+  }
+  footer {
+    align-items: center;
+    a {
+      margin: 1rem 0 0.5rem;
+    }
+  }
+
+  main {
+    border-radius: 0;
+    width: fill-available;
+
+    div {
+      align-items: center;
+    }
+    button,
+    select {
+      width: -webkit-fill-available;
+      text-align: center;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      width: -webkit-fill-available;
+      text-align: center;
+    }
+    h2 {
+      white-space: normal;
+    }
+  }
+
+  //cuentas
+  .cuentasMain {
+    margin-bottom: -2rem;
+    .caja-ahorro {
+      margin: -2rem 0 0 -2rem;
+      width: 100vw;
+      border-radius: 0;
+    }
+  }
+  //transferencias
+  .transferenciasMain {
+    border-radius: 0;
+    form {
+      align-items: center;
+    }
+  }
+
+  //pagos
+  .pagosMain {
+    .facturasWrapper {
+      flex-direction: column;
+    }
+
+    dt {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+
+//contacto
+.contactoBody{
+  display: flex;
+flex-direction: column;
+}
+.contactoMain{
+  text-align: center;
+  padding: 3rem;
+  .contact-item{
+    margin: 1rem 0 1rem;
+  }
+
+  p span{
+    font-weight: bold;
+  }
+}
+
+//  convertidor de moneda 
+.convertidorBody{
+  display: flex;
+  flex-direction: column;
+  main{
+    padding: 3rem;
+    text-align: center;
+    h1{
+      margin-bottom: 1rem;
+    }
+    input{
+      margin-bottom: 2rem;
+    }
+    select{
+      margin-bottom: 1rem;
+    }
+    button{
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  .convertidorMain {
+
+    text-align: center;
+    font-family: "Gotham", sans-serif;
+  }
+
+  #amount{
+    max-width: 50%;
+  }
+  #swapCurrency{
+    background-color: var(--main-white);
+    border: 0px;
+    margin-top: -1rem;
+    &:hover{
+      background-color: var(--main-white);
+    }
+  }
+}

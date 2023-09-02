@@ -1,0 +1,538 @@
+:root {
+  --main-background-color: #2a3240;
+  --main-white: #f6f6f6;
+  --main-lightblue: #00a6ab;
+  --menu-lightgray: #ededed;
+  --footer-gray: #dbdbdb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+.bodyWrapper {
+  display: flex;
+  min-height: 95vh;
+}
+
+main {
+  position: relative;
+  margin: auto auto;
+  background-color: var(--main-white);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 4px solid var(--footer-gray);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #00a6ab;
+  align-self: center;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #00a6ab;
+  align-self: center;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input[type=number],
+input[type=text] {
+  width: -webkit-fill-available;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  margin: 1rem;
+  height: 2rem;
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+}
+button:hover {
+  background-color: var(--footer-gray);
+  font-weight: 600;
+}
+button:active {
+  font-weight: 100;
+  background-color: var(--menu-lightgray);
+}
+
+select {
+  width: -webkit-fill-available;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sidebar */
+.sidebar {
+  height: inherit;
+  margin-top: 2.5vh;
+  width: 16rem;
+  border-radius: 0px 40px 0px 0px;
+  background-color: var(--main-white);
+  border: 3px solid var(--footer-gray);
+  /* wrapper para ubicar mejor el contenido dentro del sidebar */
+}
+.sidebar img {
+  width: 5rem;
+  background-color: gray;
+  border-radius: 50%;
+}
+.sidebar .dropDownMenu {
+  background-color: var(--main-white);
+  width: 2rem;
+  margin-left: 2rem;
+  border-radius: 0;
+  display: none;
+}
+.sidebar .currentPage {
+  padding: 10px;
+  background-color: var(--footer-gray);
+  pointer-events: none;
+}
+.sidebar .wrapper {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar .wrapper header {
+  display: flex;
+  margin: 1.5rem 0 1.5rem;
+  justify-content: center;
+}
+.sidebar .wrapper header h1 {
+  color: #00a6ab;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.sidebar .wrapper nav {
+  position: relative;
+  top: -3rem;
+}
+.sidebar .wrapper nav ul li {
+  list-style: none;
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+  transition: 500ms;
+}
+.sidebar .wrapper nav ul li a {
+  display: block;
+}
+.sidebar .wrapper nav ul li:hover {
+  transition: 500ms;
+  transform: translateY(0px);
+  padding: 10px;
+  background-color: var(--menu-lightgray);
+}
+
+footer {
+  position: relative;
+  height: 3.5rem;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0 1.5rem 0;
+  background-color: var(--footer-gray);
+}
+footer .redesSociales {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 2rem;
+  width: 15rem;
+  justify-content: space-between;
+}
+footer .redesSociales img {
+  width: 2rem;
+  transition: 500ms;
+  transform: translateY(0px);
+  cursor: pointer;
+}
+
+/* Cuentas */
+.cuentasMain {
+  position: relative;
+  margin: auto auto;
+  background-color: var(--main-background-color);
+  border: none;
+}
+.cuentasMain .caja-ahorro {
+  background-color: var(--main-white);
+  border-radius: 20px;
+  border: 3px solid var(--footer-gray);
+  margin: 2rem 0 2rem;
+  padding: 3rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.cuentasMain .caja-ahorro .movimientosLink {
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+  width: 415px;
+  margin: 0 16px 16px 16px;
+  text-align: center;
+  height: 1.7rem;
+}
+.cuentasMain .caja-ahorro .movimientosLink:hover {
+  background-color: var(--footer-gray);
+  font-weight: 600;
+}
+.cuentasMain .caja-ahorro .saldoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.cuentasMain .caja-ahorro .saldoWrapper img {
+  width: 1.6rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.cuentasMain .caja-ahorro .saldoWrapper h2 {
+  margin-bottom: 1rem;
+}
+.cuentasMain .caja-ahorro #transferir {
+  margin-top: 2rem;
+}
+
+/* Ultimos Movimientos */
+.ultimosMovimientosBody {
+  display: flex;
+  flex-direction: column;
+}
+.ultimosMovimientosBody ul {
+  list-style-type: none;
+  text-align: center;
+}
+.ultimosMovimientosBody ul li {
+  margin: 1rem 0 1rem;
+}
+.ultimosMovimientosBody ul span {
+  font-weight: bold;
+}
+.ultimosMovimientosBody ul .ingreso {
+  color: green;
+}
+.ultimosMovimientosBody ul .egreso {
+  color: red;
+}
+
+/* Transferencias */
+.transferenciasMain {
+  background-color: var(--main-white);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.transferenciasMain form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.transferenciasMain form label {
+  margin: 2rem 0 0.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.transferenciasMain form button {
+  margin: 2rem auto -0.5rem;
+  height: 2rem;
+  width: 8rem;
+}
+
+/* Pagos */
+.pagosMain {
+  margin: 1rem auto 1rem;
+}
+.pagosMain .cuentaSelect {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+}
+.pagosMain img {
+  max-width: 1rem;
+  cursor: pointer;
+}
+.pagosMain .facturasWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.pagosMain .facturasWrapper .facturasResume,
+.pagosMain .facturasWrapper .facturasDetails {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+.pagosMain .facturasWrapper .facturasDetails {
+  align-items: center;
+  text-align: center;
+  background-color: var(--footer-gray);
+  border-radius: 20px;
+}
+.pagosMain .facturasWrapper .facturasDetails.hidden {
+  display: none;
+}
+.pagosMain .facturasWrapper .facturasDetails span {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pagosMain .facturasWrapper .facturasDetails span:hover {
+  text-decoration: underline;
+}
+.pagosMain .facturasWrapper dt {
+  font-weight: bold;
+}
+.pagosMain .facturasWrapper .facturasPrice {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem;
+}
+.pagosMain .facturasWrapper .facturasPrice dd {
+  margin-left: 1rem;
+}
+.pagosMain .totalSuma,
+.pagosMain .cuentaDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagosMain .totalSuma span,
+.pagosMain .cuentaDetail span {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.pagosMain .pagarButton {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1rem;
+  text-align: center;
+}
+.pagosMain .pagarButton button {
+  height: 2rem;
+  border-radius: 10px;
+  border: 2px solid var(--main-lightblue);
+  cursor: pointer;
+}
+.pagosMain .pagarButton button:active {
+  background-color: var(--footer-gray);
+  font-size: 80%;
+}
+.pagosMain .checkout a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Prestamos */
+.sidebar.sidebarPrestamos {
+  height: inherit;
+}
+
+.prestamosBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.prestamosMain {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3.5rem;
+  margin: 1rem auto 1rem;
+}
+.prestamosMain .nuevoPrestamo {
+  margin-top: 1.5rem;
+}
+.prestamosMain .nuevoPrestamo .prestamosForm {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+}
+.prestamosMain .nuevoPrestamo .prestamosForm label {
+  margin-top: 1rem;
+}
+.prestamosMain .nuevoPrestamo .prestamosForm button {
+  margin-top: 2rem;
+  width: 10rem;
+}
+.prestamosMain .prestamoDetails {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.prestamosMain .prestamoDetails form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* login screen */
+/* Media Queries */
+@media (max-width: 840px) {
+  * {
+    flex-flow: column wrap;
+  }
+  body {
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+  }
+  div {
+    border-radius: 0;
+  }
+  .sidebar {
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .sidebar header {
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sidebar header .dropDownMenu {
+    display: block;
+  }
+  .sidebar nav {
+    margin-top: 2rem;
+  }
+  footer {
+    align-items: center;
+  }
+  footer a {
+    margin: 1rem 0 0.5rem;
+  }
+  main {
+    border-radius: 0;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+  }
+  main div {
+    align-items: center;
+  }
+  main button,
+  main select {
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+  main input[type=number],
+  main input[type=text] {
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+  main h2 {
+    white-space: normal;
+  }
+  .cuentasMain {
+    margin-bottom: -2rem;
+  }
+  .cuentasMain .caja-ahorro {
+    margin: -2rem 0 0 -2rem;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .transferenciasMain {
+    border-radius: 0;
+  }
+  .transferenciasMain form {
+    align-items: center;
+  }
+  .pagosMain .facturasWrapper {
+    flex-direction: column;
+  }
+  .pagosMain dt {
+    margin-top: 0.5rem;
+  }
+}
+.contactoBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactoMain {
+  text-align: center;
+  padding: 3rem;
+}
+.contactoMain .contact-item {
+  margin: 1rem 0 1rem;
+}
+.contactoMain p span {
+  font-weight: bold;
+}
+
+.convertidorBody {
+  display: flex;
+  flex-direction: column;
+}
+.convertidorBody main {
+  padding: 3rem;
+  text-align: center;
+}
+.convertidorBody main h1 {
+  margin-bottom: 1rem;
+}
+.convertidorBody main input {
+  margin-bottom: 2rem;
+}
+.convertidorBody main select {
+  margin-bottom: 1rem;
+}
+.convertidorBody main button {
+  padding: 1rem;
+  text-align: center;
+}
+.convertidorBody .convertidorMain {
+  text-align: center;
+  font-family: "Gotham", sans-serif;
+}
+.convertidorBody #amount {
+  max-width: 50%;
+}
+.convertidorBody #swapCurrency {
+  background-color: var(--main-white);
+  border: 0px;
+  margin-top: -1rem;
+}
+.convertidorBody #swapCurrency:hover {
+  background-color: var(--main-white);
+}/*# sourceMappingURL=style.css.map */

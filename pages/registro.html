@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/logo.png">
+</head>
+
+
+<body class="register-body">
+    <header>
+        <a class="Logo-h" href="index.html"> <img src="../assets/icons/logo-name.png" alt="Volver al login - Logo" class="image-logo"></a>
+        <nav class="nav-bar">
+            <a href="contactoUnlogged.html">Contacto</a>
+        </nav>
+    </header>
+    <main class="register-main">
+        <div class="register-form">
+       
+         <h1>REGISTRO</h1>
+        <form action="">
+
+            <input class="register-input-box" type="text" name="name"  placeholder= "Nombre" required>
+            <br>
+
+            <input class="register-input-box"type="text" name="apellido"  placeholder= "Apellido" required>
+            <br>
+
+            <input class="register-input-box" type="email" name="email" placeholder="Correo electrónico" required>
+            <br>
+
+            <input class="register-input-box" type="text" name="user" placeholder="Nombre de usuario" required>
+            <br>
+
+            <input class="register-input-box" type="password" name="password"  placeholder="Contraseña" required>
+            <br>
+
+            <input class="register-input-box" type="password" name="confirm-password" placeholder="Confirmar contraseña" required>
+            <br>
+
+            <select class="genero" name="genero" required>
+                <option value="seleccionar-genero">Seleccione su género</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            <br>
+            <div class="register-term"
+                <label for="terminos-condicniones" class="label-term"><input type="checkbox" class="checkbox"> Acepto los términos y condiciones </label>
+            </div>
+            <input type="submit" value="Registrarse" class="register-button">
+        </form>
+        </div>
+    </main>
+</body>
+</html>

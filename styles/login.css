@@ -1,0 +1,263 @@
+:root {
+    --main-background-color: #2a3240;
+    --main-white: #f6f6f6;
+    --main-lightblue: #00a6ab;
+    --menu-lightgray: #ededed;
+    --footer-gray: #dbdbdb;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gotham", sans-serif;
+  }
+
+/* body */
+.login-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2a3240;
+    background-size: cover;
+    background-position: center;
+    padding: 55px;
+  }
+  
+  /* login screen */
+  .login-main { 
+   margin: 0;
+   background-color: var(--main-white);
+margin-right: -1.5rem;
+height: 42.5rem;
+display: flex;
+align-items: center;
+border-radius: 1rem;
+}
+  .login-main .nombre-del-banco {
+display: flex;
+align-items: center;
+  }
+  .login-main .nombre-del-banco .Color1 {
+    color: #ffffff;
+    text-align: left;
+  }
+  .login-main .nombre-del-banco .Color2 {
+    color: #00A6AB;
+  }
+  .login-main .formulario {
+    width: 480px;
+    padding: 2rem 3rem;
+    position: relative;
+  }
+   h1 {
+    margin-top: 5px;
+    font-size: 36px;
+    text-align: center;
+    color: var(--main-lightblue);
+  }
+  .login-main .formulario .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+  }
+  .login-main .input-box input {
+    width: 100%;
+    height: 20%;
+    background: transparent;
+    border-radius: 40px;
+    outline: none;
+    border-color: #00A6AB;
+    font-size: 16px;
+    color: #2a3240;
+    padding: 28px;
+  }
+  .login-main .input-box input::-moz-placeholder {
+    color: #2a3240;
+    text-align: center;
+  }
+  .login-main .input-box input::placeholder {
+    color: #2a3240;
+    text-align: center;
+  }
+  .login-main .input-box img {
+    position: absolute;
+    right: 15px;
+    top: 34%;
+  }
+  .login-main .formulario .forgot-password {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -15px 0 15px;
+    margin-top: 2px;
+  }
+  .login-main .forgot-password label input {
+    accent-color: #fff;
+    margin-right: 5px;
+  }
+  .login-main .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  .login-main .formulario .loginButton {
+    width: 100%;
+    height: 50px;
+    background: #00A6AB;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 5px rgb(138, 138, 138);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+
+  }
+
+  .loginButton a{
+    color: var(--main-white);
+    text-decoration: none;
+  }
+  .login-main .formulario .link-registro {
+    font-size: 14px;
+    margin: 12px 0 12px;
+    text-align: center;
+  }
+  .login-main p a {
+    color: #2a3240;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .login-main p a:hover {
+    text-decoration: underline;
+  }
+  .image-container { 
+    text-align: center;
+  }
+  .image {
+    width: 75vw;
+    max-width: 90%;
+    height: 680px;
+    object-fit: cover;
+    padding-right: 30px;
+  }
+  /*Registro*/
+  .register-body{
+    background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .register-main {
+    background-color: var(--main-white);
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+  }
+  .register-main h1 { 
+   margin: center;
+   padding: 2rem 0 1rem;
+  }
+  
+  .register-main .register-form .register-input-box { 
+    width: 440px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50px;
+    outline: none;
+    border-color: #00A6AB;
+    font-size: 16px;
+    color: #2a3240;
+    padding: 25px;
+    margin: 15px;
+  }
+  
+  .register-main .register-input-box input::-ms-input-placeholder {
+    color: #2a3240;
+    text-align: center;
+  
+  }
+  .register-form .register-input-box input::placeholder {
+    color: #2a3240;
+    text-align: center;
+  }
+  .register-form .genero { 
+    width: 340px;
+    height: 3rem;
+    border-radius: 50px;
+    border: 2px solid #00A6AB;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left:60px;
+    color: #2a3240;
+  }
+  .register-form .register-button {
+    width: 220px;
+    height: 50px;
+    background: #03cdd4;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 5px rgb(138, 138, 138);
+    cursor: pointer;
+    font-size: 16px;
+    color: #2a3240;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-left: 110px;
+  }
+  .register-form .register-term { 
+  
+    accent-color: #fff;
+    margin-left: 25px;
+    padding-top: 20px;
+    color: #2a3240;
+    font-size: 14px;
+  }
+  
+  /* Para alinear el label y el checkbox*/
+  
+  .register-form .register-term .label-term 
+  {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+  }
+  .register-form .register-term .checkbox
+  {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+  }
+  .loginWrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      width: 70vw;
+    }
+ a{
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover{
+    font-weight: bold;
+  }

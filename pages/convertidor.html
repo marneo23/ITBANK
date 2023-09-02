@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Monedas - RAWRBank</title>
+<link rel="stylesheet" href="../styles/style.css">
+<link rel="icon" type="image/x-icon" href="../assets/icons/logo.png">
+</head>
+
+<body class="convertidorBody">
+  <div class="bodyWrapper">
+
+  <section class="sidebar">
+    <div class="wrapper">
+
+        <header>
+            <h2>RAWR</h2>
+            <img src="../assets/icons/logo.png" alt="Logo">
+            <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+        </header>
+
+        <nav class="navigationMenu">
+            <ul>
+                <li><a href="cuentas.html">Cuentas</a></li>
+                <li><a href="transferencia.html">Transferencias</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="prestamos.html">Prestamos</a></li>
+                <li class="currentPage"><a href="convertidor.html">Convertidor de moneda</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<main class="convertidorMain">
+  <h1>Convertidor de moneda</h1>
+  <div id="converter">
+      <input type="number" id="amount" placeholder="Monto">
+      <select id="fromCurrency">
+        <option value="ars">Peso Argentino</option>
+        <option value="usd">Dólar USA</option>
+        <option value="eur">Euro</option>
+      </select>
+      <button id="swapCurrency"><img src="../assets/icons/sortingArrows.png" alt="Invertir posiciones de Divisas"></button>
+      <select id="toCurrency">
+        <option value="ars">Peso Argentino</option>
+        <option value="usd">Dólar USA</option>
+        <option value="eur">Euro</option>
+      </select>
+      <button id="convertButton">Convertir</button>
+      <div id="resultContainer">
+        <p id="result"></p>
+      </div>
+    </div>
+</main>
+  </div>
+
+    <footer>
+      <a href="contacto.html">Contacto</a>
+      <div class="redesSociales">
+        <a href=""> <img src="../assets/icons/instagram.png" alt="Nuestro Instagram"> </a>
+        <a href=""> <img src="../assets/icons/twitter.png" alt="Nuestro Twitter"> </a>
+        <a href=""> <img src="../assets/icons/facebook.png" alt="Nuestro Facebook"> </a> 
+       </div>
+    <a href="index.html">Cerrar sesión</a>
+  </footer>
+</body>
+
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/convertidor.js"></script>
+</html>

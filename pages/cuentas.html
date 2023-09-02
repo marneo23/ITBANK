@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/logo.png">
+    <title>Cuentas - RAWRBank</title>
+</head>
+
+<body>
+    <div class="bodyWrapper">
+        <section class="sidebar">
+            <div class="wrapper">
+
+                <header>
+                    <h2>RAWR</h2>
+                    <img src="../assets/icons/logo.png" alt="Logo">
+                    <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+                </header>
+
+                <nav class="navigationMenu">
+                    <ul>
+                        <li class="currentPage"><a href="cuentas.html">Cuentas</a></li>
+                        <li><a href="transferencia.html">Transferencias</a></li>
+                        <li><a href="pagos.html">Pagos</a></li>
+                        <li><a href="prestamos.html">Prestamos</a></li>
+                        <li><a href="convertidor.html">Convertidor de moneda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <main class="cuentasMain">
+<h1 class="hidden">Cuentas</h1>
+            <div class="caja-ahorro">
+                <h2>Caja de ahorro N° 123</h2>
+                <div class="saldoWrapper">
+                    <h3 class="saldo">Saldo: $0</h3>
+                    <img src="../assets/icons/eye.svg" alt="Ocultar Saldo" class="eyeOpen">
+                </div>
+
+                <button id="transferir"><a href="transferencia.html">Transferir</a></button>
+                <a href="ultimosMovimientos.html" class="movimientosLink">Últimos movimientos</a>
+            </div>
+
+            <div class="caja-ahorro">
+                <h2>Caja de ahorro N° 321</h2>
+                <div class="saldoWrapper">
+                    <h3 class="saldo">Saldo: $0</h3>
+                    <img src="../assets/icons/eye.svg" alt="Ocultar Saldo" class="eyeOpen">
+                </div>
+
+                <button id="transferir"><a href="transferencia.html">Transferir</a></button>
+                <a href="ultimosMovimientos.html" class="movimientosLink">Últimos movimientos</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <a href="contacto.html">Contacto</a>
+        <div class="redesSociales">
+            <a href=""> <img src="../assets/icons/instagram.png" alt="Nuestro Instagram"> </a>
+            <a href=""> <img src="../assets/icons/twitter.png" alt="Nuestro Twitter"> </a>
+            <a href=""> <img src="../assets/icons/facebook.png" alt="Nuestro Facebook"> </a> 
+           </div>
+      <a href="index.html">Cerrar sesión</a>
+    </footer>
+
+</body>
+
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/cuentas.js"></script>
+</html>
